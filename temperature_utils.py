@@ -34,13 +34,13 @@ def temperature_tuple(temperatures: Iterable, input_unit_of_measurement: str) ->
     """
     print(input_unit_of_measurement)
     answer = ()
-    for temp in temperatures:
+    for (i, temp) in enumerate(temperatures):
         if input_unit_of_measurement == 'f':
-            answer.__add__((temp, convert_to_fahrenheit(temp)))
-        else:# input_unit_of_measurement == 'c':
-            answer.__add__((temp, convert_to_celsius(temp)))
-        # else:
-        #     answer = None
+            answer = (*answer, (temp, float(convert_to_celsius(temp))))
+        elif input_unit_of_measurement == 'c':
+            answer = (*answer, (temp, convert_to_fahrenheit(temp)))
+        else:
+            answer = ()
 
 
     return answer

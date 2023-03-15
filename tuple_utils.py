@@ -40,10 +40,7 @@ def print_indexes_and_entries(indexes: Iterable, entries: Iterable) -> None:
     :return: None
     """
     for i, e in zip(indexes, entries):
-        index = '          '
         print('Index: {0:11}Entry: {1}'.format(str(i), str(e)))
-
-    pass
 
 
 def print_items_with_index(items: Iterable):
