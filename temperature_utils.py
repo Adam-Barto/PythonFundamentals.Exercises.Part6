@@ -39,6 +39,7 @@ def temperature_tuple(temperatures: Iterable, input_unit_of_measurement: str) ->
             answer = (*answer, (temp, convert_to_fahrenheit(temp)))
         else:
             answer = ()
+            break
 
 
     return answer
