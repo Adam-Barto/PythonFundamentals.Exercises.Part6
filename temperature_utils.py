@@ -1,4 +1,3 @@
-import math
 from typing import Iterable, Tuple
 
 
@@ -32,9 +31,8 @@ def temperature_tuple(temperatures: Iterable, input_unit_of_measurement: str) ->
     :param input_unit_of_measurement: The unit a measure to use to convert the values in the temperatures parameter
     :return: A tuple of tuples
     """
-    print(input_unit_of_measurement)
     answer = ()
-    for (i, temp) in enumerate(temperatures):
+    for temp in temperatures:
         if input_unit_of_measurement == 'f':
             answer = (*answer, (temp, float(convert_to_celsius(temp))))
         elif input_unit_of_measurement == 'c':
